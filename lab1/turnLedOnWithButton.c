@@ -14,6 +14,8 @@ void setup() {
 
 void loop() {
 	buttonState = digitalRead(BUTTON);
+
+	// state changed
 	if (buttonState != lastButtonState) {
 		if (!isTurnedOn) {
 			counter++;
