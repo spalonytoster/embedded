@@ -1,0 +1,17 @@
+{
+  "name": "embedded",
+  "homepage": "https://github.com/spalonytoster/embedded",
+  "authors": [
+    "Maciej Posłuszny <xmachiei@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
