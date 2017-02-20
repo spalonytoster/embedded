@@ -15,7 +15,7 @@ function setup() {
 }
 
 function tap() {
-  return lastButtonState == 'HIGH' && buttonState == 'LOW';
+  return lastButtonState == 'HIGH';
 }
 
 function doubleTap() {
@@ -39,7 +39,7 @@ function loop() {
   $('#led-status').text(isTurnedOn ? 'ON' : 'OFF');
   ///
 
-  if (buttonState != lastButtonState) {
+  if (buttonState !== lastButtonState) {
     if (tap()) {
       console.log('tapped');
       if (doubleTap()) {

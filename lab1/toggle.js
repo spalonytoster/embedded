@@ -1,7 +1,6 @@
 // jshint esversion: 6
-let counter = 0;
 let buttonState = 'LOW';
-let lastButtonState;
+let lastButtonState = 'LOW';
 let isTurnedOn = false;
 
 function setup() {
@@ -16,21 +15,11 @@ function setup() {
 function loop() {
   $('#led-status').text(isTurnedOn ? 'ON' : 'OFF');
   ///
-	if (buttonState != lastButtonState) {
-		if (!isTurnedOn) {
-			counter++;
+	if (buttonState !== lastButtonState) {
+    lastButtonState = buttonState;
+		if (lastButtonState === 'HIGH') {
+      isTurnedOn = !isTurnedOn;
 		}
-		else {
-			counter--;
-		}
-		lastButtonState = buttonState;
-	}
-
-	if (counter === 0 && isTurnedOn) {
-		isTurnedOn = false;
-	}
-	if (counter === 2 && !isTurnedOn) {
-		isTurnedOn = true;
 	}
 
   if (isTurnedOn) {
